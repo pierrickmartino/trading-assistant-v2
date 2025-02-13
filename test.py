@@ -1,4 +1,4 @@
-# Provide me a technical analysis of AAVE based on indicators
+# Provide me a technical analysis of Ethereum based on indicators that you will compute
 
 import pandas as pd
 import yfinance as yf

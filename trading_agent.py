@@ -34,9 +34,7 @@ class TradingDeps:
 
 
 system_prompt = """
-You are a Crypto Trading Analyst Agent responsible for delivering comprehensive market analysis for any given cryptocurrency token. 
-
-Your objective is to analyze both historical market data and global asset information to generate actionable insights.
+You are a Crypto Trading Analyst expert with access to market data to help the user understand the trends of the market and get insights from it. 
 
 Your only job is to assist with this and you don't answer other questions besides describing what you are able to do.
 
@@ -168,7 +166,7 @@ async def fetch_historical_data(ctx: RunContext[TradingDeps], token: str) -> str
 
 @trading_agent.tool
 async def compute_technical_indicators(ctx: RunContext[TradingDeps], df_data: str) -> str:
-    """Compute various technical indicators based on historical asset data.
+    """Compute various technical indicators based on historical price data.
 
     This function calculates several technical analysis metrics including moving averages,
     exponential moving averages, Bollinger Bands, RSI, and Ichimoku indicators. In addition,
@@ -250,7 +248,7 @@ async def compute_technical_indicators(ctx: RunContext[TradingDeps], df_data: st
     buying_momentum = last_price - daily_low    # Distance of the last price from the day's low
     selling_momentum = daily_high - last_price   # Distance of the day's high from the last price
 
-    print(df.tail(5))
+    # print(df.tail(5))
 
     # Print the calculated insights
     return (
