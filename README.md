@@ -1,0 +1,1 @@
+# trading-assistant-v2
