@@ -1,4 +1,5 @@
 # Provide me a technical analysis of Ethereum based on indicators that you will compute
+# Provide me the most complete technical analysis of Chainlink based on indicators that you will compute
 
 import pandas as pd
 import yfinance as yf
